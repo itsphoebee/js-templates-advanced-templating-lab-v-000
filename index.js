@@ -12,8 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function createRecipe() {
   var recipe = getRecipe()
-  var recipeTemplate = document.getElementById("recipe-template").innerHTML
-  var template = Handlebars.compile(recipeTemplate)
+  var template = Handlebars.compile(document.getElementById("recipe-template").innerHTML)
   document.getElementById("main").innerHTML = template(recipe)
 }
 
