@@ -34,8 +34,8 @@ function getRecipe() {
 function displayEditForm(){
   var name = document.getElementById('nameHeader').innerText;
   var description = document.getElementById('recipeDescription').innerText;
-  var ingredients = [];
   var ingredientsNodes = document.getElementsByName("ingredientsList");
+  var ingredients = [];
 
   for (let i = 0; i < ingredientsNodes.length; i++){
       ingredients.push(ingredientsNodes[i].innerText)
