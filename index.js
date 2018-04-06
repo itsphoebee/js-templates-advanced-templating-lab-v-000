@@ -39,7 +39,7 @@ function displayEditForm(){
     ingredients.push(ingredientsNodes[i].innerText)
   }
   let recipe = {name, description, ingredients, submitAction: 'createRecipe()'}
-  let template = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML;)
+  let template = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML)
 
   document.getElementById('main').innerHTML = template(recipe);
 }
