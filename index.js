@@ -3,8 +3,12 @@ function init() {
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
   function renderRecipe() {
     var template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-    var html = template(getRecipe());
+    var html = template(getRecipe();)
   }
+
+  Handlebars.registerHelper('displayIngredient', function(){
+
+  })
 }
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
