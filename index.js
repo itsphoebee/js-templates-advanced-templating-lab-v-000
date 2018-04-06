@@ -4,11 +4,11 @@ function init() {
     return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>');
   })
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
+  Handlebars.registerPartial('recipeFormPartial', document.getElementById('recipe-form-partial').innerHTML)
 
   let template = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML)
   document.getElementsByTagName("main")[0].innerHTML = template({'submitAction': 'createRecipe()'});
 
-  Handlebars.registerPartial('recipeFormPartial', document.getElementById('recipe-form-partial').innerHTML)
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
