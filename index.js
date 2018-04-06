@@ -50,7 +50,6 @@ function displayEditForm(){
 
 function updateRecipe(){
   let recipe = getRecipe();
-  let recipeTemplate = document.getElementById('recipe-template').innerHTML;
-  let template = Handlebars.compile(recipeTemplate)
+  let template = Handlebars.compile(document.getElementById('recipe-template').innerHTML)
   document.getElementById('main').innerHTML = template(recipe)
 }
