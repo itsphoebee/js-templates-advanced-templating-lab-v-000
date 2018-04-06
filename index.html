@@ -17,6 +17,9 @@
         Name: <input id="name" type="text" value={{name}}><br>
         Description: <input id="description" type="text" value="{{description}}"><br>
         Ingredients Needed:<br>
+          {{#each ingredients}}
+            <input name="ingredients" type="text" value="{{this}}"><br>
+          {{ else }}
           Ingredient: <input name="ingredients" type="text"><br>
           Ingredient: <input name="ingredients" type="text"><br>
           Ingredient: <input name="ingredients" type="text"><br>
