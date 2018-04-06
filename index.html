@@ -34,13 +34,11 @@
       <div id="recipeDescription">
         {{ description }}
       </div>
-      <div id="ingredientsList">
-        <ul>
-          {{#each ingredients}}
-            {{displayIngredient this}}
-          {{/each}}
-        </ul>
-      </div>
+      <ul>
+        {{#each ingredients}}
+          {{displayIngredient this}}
+        {{/each}}
+      </ul>
     </script>
 
 
