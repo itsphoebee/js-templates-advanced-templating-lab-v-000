@@ -12,7 +12,7 @@
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="index.js"></script>
 
-      <form id="recipe-form-template" onsubmit="createRecipe();return false;">
+      <form id="recipe-form-template" onsubmit="{{submitAction}};return false;">
         Name: <input id="name" type="text"><br>
         Description: <input id="description" type="text"><br>
         Ingredients Needed:<br>
