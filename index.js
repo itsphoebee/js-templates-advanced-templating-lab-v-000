@@ -1,11 +1,6 @@
 function init() {
   //put any page initialization/handlebars initialization here
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
-  function renderRecipe() {
-    var template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-    var html = template(getRecipe())
-  }
-
   Handlebars.registerHelper('displayIngredient', function(){
 
   })
