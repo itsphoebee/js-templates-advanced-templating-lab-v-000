@@ -32,7 +32,21 @@ function getRecipe() {
 }
 
 function displayEditForm(){
+  var name = document.getElementById('nameHeader').innerText;
+  var description = document.getElementById('recipeDescription').innerText;
+  var ingredients = [];
+  var ingredientsNodes = document.getElementsByName("ingredientsList");
 
+  for (let i = 0; i < ingredientsNodes.length; i++){
+      ingredients.push(ingredientsNodes[i].innerText)
+    }
+
+    let recipe = {name, description, ingredients, submitAction: 'createRecipe()'}
+
+    let recipeFormTemplate = document.getElementById('recipe-form-template').innerHTML;
+    let template = Handlebars.compile(recipeFormTemplate)
+
+    document.getElementById('main').innerHTML = template(recipe);
 }
 
 function updateRecipe(){
