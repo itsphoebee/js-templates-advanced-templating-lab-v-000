@@ -8,6 +8,7 @@ function init() {
   let template = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML)
   document.getElementsByTagName("main")[0].innerHTML = template({'submitAction': 'createRecipe()'});
 
+  Handlebars.registerPartial('recipeFormPartial', document.getElementById('recipe-form-partial').innerHTML)
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
