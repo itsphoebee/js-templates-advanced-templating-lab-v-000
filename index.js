@@ -15,30 +15,30 @@ document.addEventListener("DOMContentLoaded", function(event) {
 })
 
 function createRecipe() {
-  var recipe = getRecipe()
-  var template = Handlebars.compile(document.getElementById("recipe-template").innerHTML)
+  let recipe = getRecipe()
+  let template = Handlebars.compile(document.getElementById("recipe-template").innerHTML)
   document.getElementById("main").innerHTML = template(recipe)
 }
 
 function getRecipe() {
-  var ingredientsNodes = document.getElementsByName("ingredients")
-  var ingredients = []
+  let ingredientsNodes = document.getElementsByName("ingredients")
+  let ingredients = []
   for(let i=0;i<ingredientsNodes.length;i++) {
     if(ingredientsNodes[i].value !== "") {
       ingredients.push(ingredientsNodes[i].value)
     }
   }
-  var name = document.getElementById("name").value
-  var description = document.getElementById("description").value
-  var recipe = {name, ingredients, description}
+  let name = document.getElementById("name").value
+  let description = document.getElementById("description").value
+  let recipe = {name, ingredients, description}
   return(recipe)
 }
 
 function displayEditForm(){
-  var name = document.getElementById('nameHeader').innerText;
-  var description = document.getElementById('recipeDescription').innerText;
-  var ingredientsNodes = document.getElementsByName("ingredientsList");
-  var ingredients = [];
+  let name = document.getElementById('nameHeader').innerText;
+  let description = document.getElementById('recipeDescription').innerText;
+  let ingredientsNodes = document.getElementsByName("ingredientsList");
+  let ingredients = [];
   for (let i=0; i<ingredientsNodes.length; i++){
     ingredients.push(ingredientsNodes[i].innerText)
   }
@@ -49,5 +49,8 @@ function displayEditForm(){
 }
 
 function updateRecipe(){
-
+  let recipe = getRecipe();
+  let recipeTemplate = document.getElementById('recipe-template').innerHTML;
+  let template = Handlebars.compile(recipeTemplate)
+  document.getElementById('main').innerHTML = template(recipe)
 }
